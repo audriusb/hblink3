@@ -5,6 +5,6 @@ envsubst < /opt/templates/hbmonitor.py > /opt/HBmonitor/config.py
 envsubst < /opt/templates/rules.py > /opt/HBlink3/rules.py
 
 touch /var/log/hblink/parrot.log
-touch /log/hbmon.log
+touch /var/log/hblink/hbmon.log
 
 /usr/bin/supervisord

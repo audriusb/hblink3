@@ -18,7 +18,7 @@ WEB_USER =  '${HBMON_USER}'
 WEB_PASS =  '${HBMON_PASSWORD}'
 
 # Files and stuff for loading alias files for mapping numbers to names
-PATH            = './'                           # MUST END IN '/'
+PATH            = '/opt/HBmonitor/'                           # MUST END IN '/'
 PEER_FILE       = 'peer_ids.json'                # Will auto-download from DMR-MARC
 SUBSCRIBER_FILE = 'subscriber_ids.json'          # Will auto-download from DMR-MARC
 TGID_FILE       = 'talkgroup_ids.json'           # User provided, should be in "integer TGID, TGID name" format
@@ -29,5 +29,5 @@ PEER_URL        = 'https://database.radioid.net/static/rptrs.json'
 SUBSCRIBER_URL  = 'https://database.radioid.net/static/users.json'
 
 # Settings for log files
-LOG_PATH        = './log/'                       # MUST END IN '/'
+LOG_PATH        = '/var/log/hblink/'                       # MUST END IN '/'
 LOG_NAME        = 'hbmon.log'
