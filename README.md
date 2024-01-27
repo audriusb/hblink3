@@ -21,9 +21,9 @@ Processes are launched by supervisord
 - Multiple archs: `docker buildx build . -t tapkation/hblink:latest --platform "linux/amd64,linux/arm64,linux/arm/v7"`
 - Single arch: `docker build . -t tapkation/hblink:latest`
 
-## Run from docker hub
+## Run from docker hub and expose ports for hblink master and hbmonitor
 
-`docker run tapkation/hblink:latest`
+`docker run tapkation/hblink:latest -p 8081:8081 -p 62030:62030`
 
 ## Config
 
