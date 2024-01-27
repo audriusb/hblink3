@@ -16,7 +16,7 @@ Processes are launched by supervisord
 
 ## Run
 
-`docker run tapkation/hblink:latest``
+`docker run tapkation/hblink:latest`
 
 ## Config
 
