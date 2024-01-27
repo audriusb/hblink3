@@ -14,8 +14,14 @@ Processes are launched by supervisord
 ## Requirements
 
 - `docker.io` installed on system
+- `buildkit` with Docker desktop or `qemu` presend on machine if you want to build for multiple archs (optional)
 
-## Run
+## Build from source (optional)
+
+- Multiple archs: `docker buildx build . -t tapkation/hblink:latest --platform "linux/amd64,linux/arm64,linux/arm/v7"`
+- Single arch: `docker build . -t tapkation/hblink:latest`
+
+## Run from docker hub
 
 `docker run tapkation/hblink:latest`
 

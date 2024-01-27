@@ -1,17 +1,22 @@
 FROM python:alpine
 
 RUN apk update
-RUN apk add git python3-dev supervisor envsubst
+RUN apk add --no-cache git python3-dev supervisor envsubst rust cargo libffi-dev
 RUN pip install twisted bitarray
+
 RUN git clone https://github.com/lz5pn/HBlink3 /tmp/hblink
 RUN mv /tmp/hblink/HBlink3/ /opt/
 RUN mv /tmp/hblink/HBmonitor/ /opt/
 RUN mv /tmp/hblink/dmr_utils3/ /opt/
 RUN rm -rf /tmp/hblink
 
+RUN apk add openssl-dev
+
 RUN pip install --upgrade /opt/dmr_utils3/
 RUN pip install -r /opt/HBlink3/requirements.txt
 RUN pip install -r /opt/HBmonitor/requirements.txt
+
+RUN apk del rust cargo libffi-dev openssl-dev
 
 RUN mkdir -p /etc/supervisor.d/
 COPY supervisord.ini /etc/supervisor.d/hblink.ini
