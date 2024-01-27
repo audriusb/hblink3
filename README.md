@@ -3,10 +3,11 @@
 ## Description
 
 Will run without any additional settings.
-Default port for hotspot to use is 62030 (all hotspots include this in their firewall whitelist)
-Tested on ubuntu linux and on RaspberryPi 3A+
-Parrot uses 9999 Talk Group
+
+Default port for hotspot to use is 62030 (all hotspots include this in their firewall whitelist). Parrot uses 9999 Talk Group.
 Default port for HBMonitor (dashboard) is 8081.
+
+Tested on ubuntu linux and on RaspberryPi 3A+.
 
 Processes are launched by supervisord
 
